@@ -16,7 +16,7 @@ func init() {
 	rootBackend := logging.NewLogBackend(os.Stdout, "", 0)
 	rootBackendFormatter := logging.NewBackendFormatter(rootBackend, format)
 	rootBackendLeveled := logging.AddModuleLevel(rootBackendFormatter)
-	rootBackendLeveled.SetLevel(logging.DEBUG, "")
+	rootBackendLeveled.SetLevel(logging.INFO, "")
 	RootLogger.SetBackend(rootBackendLeveled)
 	RootLogger.Warning("Logger initialized")
 }
